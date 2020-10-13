@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	<script src="/js/gnb-drop.js"></script>
+	<script src="/js/myscript.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	
+</head>
+<body> 
+	<!-- header을 포함시키는 영역 -->
+	<div th:insert="~{commons/header :: header }" >
+	</div>
+	<!-- <div th:include="~{commons/header :: header }">
+		th:fragment 가 지정된 안쪽 내용만 include한다. -->
+	<section id="visual" th:fragment="visual">
+		<h1>비주얼영역</h1>
+		<div id="visual-area">
+			<ul>
+				<li class="bg1"></li>
+				<li class="bg2"></li>
+				<li class="bg3"></li>
+				<li class="bg4"></li>
+				<li class="bg5"></li>
+			</ul>
+		</div>
+		
+		<div id="list-wrap" >
+			<div class="list view-width">
+				<a href="#" onclick="listClick('.bg1')"></a>
+				<a href="#" onclick="listClick('.bg2')"></a>
+				<a href="#" onclick="listClick('.bg3')"></a>
+				<a href="#" onclick="listClick('.bg4')"></a>
+				<a href="#" onclick="listClick('.bg5')"></a>
+			</div>
+		</div>
+		<div id="key-visual-bg">
+			<div class="key-visual row-align">
+				<div class="key-view">
+				<script type="text/javascript">
+					$(function(){
+						var li_ea=$("#key-visual-label li").length;
+						$("#key-visual-label").css("width", li_ea*212);
+					});
+				</script>
+					<ul id="key-visual-label" class="row-align">
+						<li><a class="key-visual-title" href="#">늘푸른 페피의 출석 선물</a></li>
+						<li><a href="#">나만의 용 로제아</a></li>
+						<li><a href="#">신규 서버 '정원Ⅱ'</a></li>
+						<li><a href="#">카카오톡 채널 친구 맺자!</a></li>
+						<li><a href="#">오늘부터 우리는 친구</a></li>
+						<li><a href="#">공성병기: 전쟁의 진화</a></li>
+						<li><a href="#">저 하늘위로 점프!</a></li>
+						<li><a href="#">제이크와 함께 아키 福(복)캉스</a></li>
+					</ul>
+				</div>
+				<div class="pagination">
+					<div >
+						<a href="#" class="btn-more"></a>
+						<a href="#" class="btn-prev"></a>
+						<span class="key-paper">1/8</span>
+						<a href="#" class="btn-next"></a>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+	<main>
+		<h1>시작페이지</h1>
+		<div class="main-wrap">
+			<section id="guide_1" class="view-width">
+			<!-- //////////////////////////////////////////////////////////////////////// -->
+				<div class="notice">
+					<div id="noticeArea"  >
+							<ul>
+								<li>새소식</li>
+							</ul>	
+						<div class="row-align" id="noticeArea-1">
+							<span class="notice-sub">
+								<strong><a href="#">공지사항</a></strong>
+							</span>
+							<span class="uls"><a href="#">업데이트</a></span>
+						</div>
+						<div id="board-slide">
+							<ul class="board-sub">
+								<li>
+									<a href="#" class="space-between">
+										<span class="weight">[안내] 개인정보처리방안</span>
+										<span>08-06</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="space-between">
+										<span class="weight">단종된 일부 루루의 주머니 아이템의</span>
+										<span>07-30</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="space-between">
+										<span>'저하늘위로 점프!' 이벤트 버그 악용</span>
+										<span>08-18</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="space-between">
+										<span>8월 12일(수) 임시 점검 보상 안내</span>
+										<span>08-12</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="space-between">
+										<span>[완료]8월 12일(수)임시점검 안내(연장)</span>
+										<span>08-12</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="space-between">
+										<span>[완료]8월 13일(목)정기점검 안내</span>
+										<span>08-11</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //////////////////////////////////////////////////////////////////////// -->
+				<div class="g1_img promotion">
+					<img alt="초보 상속자" src="/images/h1.jpg">
+					<div class="info">
+						<strong>초보상속자</strong>
+						<p>쉽고 빠르게</p>
+						<p>만렙달성</p>
+					</div>
+				</div>
+				<!-- //////////////////////////////////////////////////////////////////////// -->
+				<div class="g1_img back">
+					<img alt="복귀 혜택" src="/images/h2.jpg">
+					<div class="info">
+						<strong>복귀 혜택</strong>
+						<p>장비걱정</p>
+						<p>이제끝</p>
+					</div>
+				</div>
+				<!-- //////////////////////////////////////////////////////////////////////// -->
+				<div class="game-start">
+					<div  class="btn-gamestart">
+						<span class="btn-inner">
+							<a href="#">게임다운로드</a>
+							<span>|</span>
+							<a href="#">서버현황</a>
+						</span>
+					</div>
+					<div class="login-wrap column-align">
+						<div class="xlgames-login">
+							<a href="#" class="login">
+								<strong>XLGAMES 로그인</strong>
+							</a>
+						</div>
+						<div id="login-etc" class="row-align">
+							<a href="#">회원가입</a>
+							<a href="#">아이디찾기</a>
+							<a href="#">비밀번호찾기</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="layout">
+				<div class="layoutTemplate view-width">
+					<div class="title-section">
+						<h2>해상 전장 시즌3 시작</h2>
+					</div>
+					
+					<div class="main-user-contents">
+						<div class="item top">
+							<div class="main-user-best">
+								<div class="main-users">
+									<a href="#">
+										<img alt="" src="/images/content1.jpg">
+									</a>
+								</div>
+								<div class="user-contnet-info">
+									<p>8월 업데이트 영상 뉴스</p>
+									<span class="character-card">
+										<strong>ArcheAge</strong>
+									</span>
+								</div>
+							</div>
+							<div class="main-user-top">
+								<a href="#"><img alt="" src="/images/content2.jpg"></a>
+								<div class="main-user-content-in">
+									<p>[아키위키] 해상선장:카마하의 덫</p>
+									<span class="character-card">
+										<strong>ArcheAge</strong>
+									</span>
+								</div>
+							</div>
+							<div class="main-user-top">
+								<a href="#"><img alt="" src="/images/content3.jpg"></a>
+								<div class="main-user-content-in">
+									<p>[업데이트 위키] 공성전</p>
+									<span class="character-card">
+										<strong>ArcheAge</strong>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="item bottom">
+							<div class="main-user-bottom">
+								<a href="#"><img alt="" src="/images/content4.jpg"></a>
+									<div class="main-user-content-in">
+										<p>하루 세번 출석하고 선물 4종 받자!</p>
+									<span class="character-card">
+										<strong>ArcheAge</strong>
+									</span>
+								</div>
+							</div>
+							<div class="main-user-bottom">
+								<a href="#"><img alt="" src="/images/content5.jpg"></a>
+									<div class="main-user-content-in">
+										<p>[업데이트 위키]집요정!</p>
+									<span class="character-card">
+										<strong>ArcheAge</strong>
+									</span>
+								</div>
+							</div>
+							<div class="main-user-bottom">
+								<a href="#"><img alt="" src="/images/content6.jpg"></a>
+									<div class="main-user-content-in">
+										<p>[추천위키] 전투 자원</p>
+									<span class="character-card">
+										<strong>ArcheAge</strong>
+									</span>
+								</div>
+							</div>
+							<div class="main-user-bottom">
+								<a href="#"><img alt="" src="/images/content7.jpg"></a>
+									<div class="main-user-content-in">
+										<p>[연재만화] 아키학개론 -9화</p>
+									<span class="character-card">
+										<strong>미대소년</strong>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-section-store">
+					<div class="main-section-inner">
+						<div class="title-section">
+							<h2>아키상점
+								<a href="#"></a>
+							</h2>
+							<a class="pointer" href="#">캐시충전</a>
+						</div>
+						<div id="slider">
+							<div class="main-store">
+								<div>
+									<a href="#"><img src="/images/in1.jpg"></a>
+								</div>
+								<div>
+									<a href="#"><img src="/images/in2.jpg"></a>
+								</div>
+								<div class="main-store-item">
+									<a href="#"><img src="/images/in3.jpg"></a>
+										<div class="flus">
+											<p id="p1">팔로스의 결정</p>
+											<p id="p2">날틀,소환수 제작 재료</p>
+										</div>
+								</div>
+								<div class="main-store-item">
+									<a href="#"><img src="/images/in4.jpg"></a>
+										<div class="flus">
+											<p id="p1">약속의 열매</p>
+											<p id="p2">집요정 생산 비용 충전</p>
+										</div>
+								</div>
+								<div class="main-store-item">
+									<a href="#"><img src="/images/in5.jpg"></a>
+									<div class="flus">
+										<p id="p1">축복의 아키: 30일</p>
+										<p id="p2">노동력 회복과 편의 강화</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-play">
+					<div class="main-section-view">
+						<div class="title-section">
+							<h2>초보자 가이드</h2>
+						</div>
+						<div class="main-user-guide">
+							<div class="main-user-play">
+								<div>
+									<div>
+										<a href="#"><img src="/images/gu1.jpg"></a>
+									</div>
+									<div class="font">
+										<span>1. 초보자가이드</span>
+									</div>
+								</div>
+							</div>
+							<div class="main-user-play">
+								<div>
+									<div>
+										<a href="#"><img src="/images/gu2.jpg"></a>
+									</div>
+									<div class="font">
+										<span>2. 레벨 업 가이드</span>
+									</div>
+								</div>
+							</div>
+							<div class="main-user-play">
+								<div>
+									<div>
+										<a href="#"><img src="/images/gu3.jpg"></a>
+									</div>
+									<div class="font">
+										<span>3. 장비 맞추기</span>
+									</div>
+								</div>
+							</div>
+							<div class="main-user-play">
+								<div>
+									<div>
+										<a href="#"><img src="/images/gu4.jpg"></a>
+									</div>
+									<div class="font">
+										<span>4. 금화 버는 법</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<div th:insert="~{commons/footer :: footer }" ></div>
+</body>
+</html>

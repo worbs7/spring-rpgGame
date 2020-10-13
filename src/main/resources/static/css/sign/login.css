@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url("../common.css");
+
+
+
+.wrap-content{
+	width: 820px;
+	margin: 0 auto;
+	padding: 60px 0 61px;
+	height: 800px;
+}
+
+.content-title{
+	width: 738px;
+	height: 72px;
+	border-bottom: 1px solid #eaeaea;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+#login{
+	width :304px;
+	margin: 0 auto;
+}
+
+#login form{
+	text-align: center;
+}
+.login-title{
+	width: 304px;
+}
+.checkbox{
+	width:280px;
+	margin-bottom: 9px;
+    margin-left: 24px;
+    text-align: left;
+}
+
+.content-title strong{
+    color: #5b7282;
+    font-size: 19px;
+}
+.content-title p{
+	color: #666;
+    line-height: 22px;
+    margin-top: 6px;
+}
+
+.save input{
+	width: 258px;
+    height: 40px;
+    border: 1px solid #dfdfdf;
+    padding: 3px 5px;
+    margin: 10px auto;
+}
+
+.button-btn{
+	width: 258px;
+	height : 40px;
+    margin-top: 7px;
+	border: 1px solid #5a9cd0;
+    background-color: #68A8DA;
+    color: #fff;
+}
+	
+.flex-center{
+	margin-top : 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.sns-login li{
+	width: 258px;
+    height: 40px;
+    border: 1px solid #dfdfdf;
+    border-color: #cbd7e1;
+    background-color: #edf2f6;
+    padding: 3px 5px;
+    margin: 10px auto;
+   
+   
+}
+.sns-login li a img{
+	width: 20px;
+    height: 20px;
+    margin-left: 50px;
+    margin-top: 4px;
+ 
+}
+#account ul{
+	position: relative;
+}
+
+#error{
+	margin-bottom: 40px;
+	padding: 20px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #da3c31;
+    border-left: 5px solid #da3c31;
+    background-color: #f6cecb;
+}
+#welcome{
+	margin-bottom: 40px;
+	padding: 20px 20px;
+    font-size: 16px;
+    text-align: center;
+    color:  #334571;
+    border-left: 5px solid #061333;
+    background-color: #dbe5fb;
+}
+
